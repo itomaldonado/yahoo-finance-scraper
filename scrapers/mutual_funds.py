@@ -60,9 +60,7 @@ class MutualFundScraper(BaseScraper):
         data = {}
         for ticker in tickers:
             url = self._get_url(ticker)
-            soup = self._get_soup(
-                'http://finance.yahoo.com/q?s={}'.format(ticker)
-            )
+            soup = self._get_soup(url)
             table = soup.find(id='yfi_fund_basics')
             table = self._convert_to_soup(table)
             data_points = table.find_all('td', class_='yfnc_tabledata1')

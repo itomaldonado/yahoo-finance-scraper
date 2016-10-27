@@ -15,7 +15,7 @@ class BaseScraper(object):
         return BeautifulSoup(str(html), 'lxml')
 
     def _get_url(self, ticker):
-        return '{}?s={}'.format(self.BASE_URL, ticker)
+        return '{}?bypass=true&s={}'.format(self.BASE_URL, ticker)
 
     def get_data(self):
         raise NotImplementedError

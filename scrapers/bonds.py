@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 class BondScraper(BaseScraper):
 
-    BASE_URL = 'http://finance.yahoo.com/bonds/composite_bond_rates'
+    BASE_URL = 'http://finance.yahoo.com/bonds/composite_bond_rates?bypass=true'
     BOND_TYPES = [
         'treasury',
         'municipal',
